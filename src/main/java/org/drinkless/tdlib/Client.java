@@ -108,7 +108,7 @@ public final class Client {
    *                      of the query or with TdApi.Error as parameter. If it is null, then
    *                      defaultExceptionHandler will be called.
    */
-  public void send(TdApi.Function query, ResultHandler resultHandler) {
+  public void send(@SuppressWarnings("rawtypes") TdApi.Function query, ResultHandler resultHandler) {
     send(query, resultHandler, null);
   }
 
