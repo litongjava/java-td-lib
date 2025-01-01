@@ -9,7 +9,8 @@ package org.drinkless.tdlib;
 public class TdApi {
   static {
     try {
-      System.loadLibrary("tdjni");
+//      System.loadLibrary("tdjni");
+      TdApiNativeLoaderUtils.init();
     } catch (UnsatisfiedLinkError e) {
       e.printStackTrace();
     }

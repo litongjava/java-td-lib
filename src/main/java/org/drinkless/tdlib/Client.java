@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public final class Client {
   static {
     try {
-      System.loadLibrary("tdjni");
+      TdApiNativeLoaderUtils.init();
     } catch (UnsatisfiedLinkError e) {
       e.printStackTrace();
     }
